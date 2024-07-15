@@ -6,7 +6,7 @@
 /*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 14:40:13 by adshafee          #+#    #+#             */
-/*   Updated: 2024/07/15 15:05:39 by adshafee         ###   ########.fr       */
+/*   Updated: 2024/07/15 16:15:38 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,28 @@ void	cmd_echo(char *cmd)
 	{
 		printf("\n");
 	}
+}
+
+void	cmd_cd(char *cmd)
+{
+	if (cmd[1] == NULL)
+	{
+		printf("'cd <space> argument'");
+		return ;
+	}
+	if (chdir(cmd[1]) != 0)
+		perror("cd");
+}
+
+void	cmd_pwd(void)
+{
+	char *pwd = getcwd(NULL, 0);
+	
+	if (pwd)
+	{
+		printf("%s\n", pwd);
+		free(pwd);
+	}
+	else
+		perror("pwd");
 }
