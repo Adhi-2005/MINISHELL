@@ -6,7 +6,7 @@
 /*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 14:40:13 by adshafee          #+#    #+#             */
-/*   Updated: 2024/07/15 16:15:38 by adshafee         ###   ########.fr       */
+/*   Updated: 2024/07/16 14:14:47 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,13 @@ void	cmd_pwd(void)
 	}
 	else
 		perror("pwd");
+}
+
+void	cmd_export(t_list *env)
+{
+	while (env)
+	{
+		printf("%s\n", (char *)env->content);
+		env = env->next;
+	}
 }
