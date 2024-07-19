@@ -6,7 +6,7 @@
 /*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 14:40:13 by adshafee          #+#    #+#             */
-/*   Updated: 2024/07/16 14:14:47 by adshafee         ###   ########.fr       */
+/*   Updated: 2024/07/17 17:43:56 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,3 +69,4 @@ void	cmd_export(t_list *env)
 		env = env->next;
 	}
 }
+
